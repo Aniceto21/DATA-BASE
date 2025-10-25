@@ -1,0 +1,29 @@
+<?php
+    session_start();
+    include('connect.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page for sessions</title>
+</head>
+<body>
+<!-- <div style="padding:15px; text-align:center;">
+    <p style="font-size:50px; font-weight:bold;">
+        Hello<?php
+        if(isset($_SESSION['email'])){
+            $email = $_SESSION['email'];
+            $query = $connection->query("SELECT * FROM `users` WHERE users.email='$email'");
+            while($row=$query->fetch_assoc()){
+                echo $row ['firstName'].''.$row['lastName'];
+            }
+        }
+        ?>
+        :)
+    </p> -->
+<a href=logout.php>LOGOUT</a>
+</div>
+</body>
+</html>
